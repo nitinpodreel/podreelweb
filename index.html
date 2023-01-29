@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Podreel</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="stickyNav" class="gradient-box-nav pr-1 md:pr-4">
+      <div id="logo" class="py-4">
+        <img
+          src="assets/podreel-logo.svg"
+          class="md:-mt-4 md:w-full w-[64px] -mr-2 md:-mr-4"
+        />
+        <p>podreel</p>
+      </div>
+      <a href="add link to get early access"
+        ><button
+          class="gradient-box"
+          class="text-center flex items-center md:mr-[25px]"
+        >
+          Get Early Access
+        </button></a
+      >
+    </div>
+
+    <!-- Landing Section -->
+    <div class="pageSection h-[80vh] pt-10" id="landingPage">
+      <div id="background" class="h-full"></div>
+      <div
+        id="container"
+        class="flex flex-col justify-center items-center h-full"
+      >
+        <div class="" id="pageHeader">
+          <h1
+            class="hidden md:block"
+            style="font-family: 'Satoshi', sans-serif"
+          >
+            podreel is a <span class="signGrad">trailer for</span><br />
+            <span class="signGrad">your podcast</span>
+          </h1>
+          <h1
+            class="md:hidden text-[41px]"
+            style="font-family: 'Satoshi', sans-serif"
+          >
+            podreel is a <span class="signGrad">trailer </span><br />
+            <span class="signGrad">for your podcast</span>
+          </h1>
+        </div>
+        <div id="description">
+          <p>
+            <b>Increase</b> podcast downloads, <b>acquire</b> new listeners and
+            <span class="md:inline hidden"><br /></span>
+            get closer to <b>generating revenue off your podcast.</b>
+          </p>
+        </div>
+        <a class="earlyAccess md:text-[21px] text-[28px] mt-[30px]" href=""
+          ><button class="gradient-box">Get Early Access</button></a
+        >
+        <a class="mt-[30px]" id="inspireLink" href="#podreelsToInspire">
+          <p>👇Check out some podreels👇</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Before and After Section -->
+    <div class="pageSection" id="beforeAndAfter">
+      <div
+        id="selection"
+        class="selection ease-linear duration-300"
+        style="background-color: #fb999c"
+      >
+        <button onclick="switchSection(1);" id="selection1">
+          Before podreel
+        </button>
+        <button
+          onclick="switchSection(2);"
+          id="selection2"
+          style="background-color: transparent; color: rgba(255, 255, 255, 0.6)"
+        >
+          After podreel
+        </button>
+      </div>
+      <div
+        class="flex md:flex-row flex-col justify-center md:items-stretch items-center my-5 gap-x-2"
+      >
+        <img id="befAfImage1" src="assets/withoutPodreel.svg" width="900px" />
+        <img
+          id="befAfImage2"
+          src="assets/sadFace.png"
+          class="object-contain md:w-[450px] md:mt-0 mt-5"
+        />
+        <!-- <div
+          class="bg-contain bg-center bg-no-repeat md:w-[450px] w-[210px] md:mt-0 mt-5"
+          style="background-image: url(assets/sadFace.png)"
+        /> -->
+      </div>
+    </div>
+
+    <!-- Instructions Section (commented out in case it's needed later) -->
+    <!-- <div class="pageSection" id="instructions">
+			<div id="instructionsHeader">
+				<h1 style="font-family: 'Satoshi', sans-serif;">Just 3 steps</h1>
+				<h4>to grow your podcast with social media</h4>
+			</div>
+			<div id="steps">
+				<div class="step" id="step1">
+					<div class="instruction">
+						<p class="stepNumber">Step 1</p>
+						<h1 style="font-family: 'Satoshi', sans-serif;">✂️ Clip</h1>
+						<p>Add your podcast episode (both audio and video files supported) and clip a great part of it. We’ll start transcribing.</p>
+					</div>
+					<img src="assets/clipImage.png">
+				</div>
+				<div class="step" id="step2">
+					<div class="instruction">
+						<p class="stepNumber">Step 2</p>
+						<h1 style="font-family: 'Satoshi', sans-serif;">🎨 Choose</h1>
+						<p>Get a head start by choosing templates. Or start with a blank canvas, if that’s your thing!</p>
+					</div>
+					<img src="assets/chooseImage.gif">
+				</div>
+				<div class="step" id="step3">
+					<div class="instruction">
+						<p class="stepNumber">Step 3</p>
+						<h1 style="font-family: 'Satoshi', sans-serif;">🤘 Customize</h1>
+						<p>Unleash your inner designer. Add your brand colors and customize every element! Now, download and share on social channels.</p>
+					</div>
+					<img src="assets/customizeImage.gif">
+				</div>
+			</div>
+		</div>
+		<div class="pageSection" id="whyPodreel">
+			<h1 id="whyTitle" style="font-family: 'Satoshi', sans-serif;">Why podreel?</h1>
+			<div id="reasons">
+				<div id="r1" class="reason" id="movie">
+					<img src="assets/movie.svg">
+					<h1 style="font-family: 'Satoshi', sans-serif;">Your podcast is like a movie</h1>
+					<p><span style="font-weight: 700;">A film crew don’t just stop at making a film.</span> They distribute and let us (audience) know that we *must* watch the film.<br><br>Let everyone know that you’ve dropped a new podcast episode.</p>
+				</div>
+				<div id="r2" class="reason" id="repurpose">
+					<img src="assets/repurpose.svg">
+					<h1 style="font-family: 'Satoshi', sans-serif;">Repurpose without limits</h1>
+					<p><span style="font-weight: 700;">Your podcast episodes have timeless insights.</span> Share them as podreels and keep acquiring listeners via social media. <br><br>Don’t let your podcast insights fall on deaf ears, ever again!</p>
+				</div>
+				<div id="r3" class="reason" id="hangout">
+					<img src="assets/hangout.svg">
+					<h1 style="font-family: 'Satoshi', sans-serif;">Hangout. Where they hangout</h1>
+					<p><span style="font-weight: 700;">Your audience spends time on social media.</span> Just an announcement post won’t increase podcast downloads. <br><br>Lure your followers by sharing multiple podreels, from the same episode.</p>
+				</div>
+			</div>
+		</div> -->
+
+    <!-- Examples Section -->
+    <div class="pageSection text-center py-10" id="podreelsToInspire">
+      <h1
+        class="text text-[22px] md:text-[80px]"
+        style="font-family: 'Satoshi', sans-serif"
+      >
+        Some podreels to inspire you...
+      </h1>
+      <p
+        class="md:text-[30px] text-[18px] font-[500]"
+        style="font-family: 'Inter'; color: #787878"
+      >
+        podreels look great on both phone and desktops.
+      </p>
+      <div
+        class="flex relative flex-wrap md:px-16 items-center justify-center gap-x-12 mt-16"
+      >
+        <a
+          href="https://www.youtube.com/watch?v=T2r1jyhT2vg"
+          target="_blank"
+          class="showcaseFrame flex flex-col"
+        >
+          <div class="h-1/2 flex items-start justify-end p-9">
+            <img src="assets/Vector.png" alt="arrow" />
+          </div>
+          <div
+            class="h-1/2 flex flex-col text-center justify-end text-white pb-5 px-6"
+          >
+            <p class="text-sm md:text-[19px] mb-3 md:mb-0">[AUDIO PODCAST]</p>
+            <p
+              class="underP text-[28px] md:text-[40px] font-inter font-semibold leading-tight"
+            >
+              James Clear on Atomic Habits
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.youtube.com/watch?v=3qHkcs3kG44"
+          target="_blank"
+          class="showcaseFrame flex flex-col"
+        >
+          <div class="h-1/2 flex items-start justify-end p-9">
+            <img src="assets/Vector.png" alt="arrow" />
+          </div>
+          <div
+            class="h-1/2 flex flex-col text-center justify-end text-white pb-5 px-6"
+          >
+            <p
+              class="underP text-[28px] md:text-[40px] font-inter font-semibold leading-tight"
+            >
+              Naval Ravikant on wealth and joy
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.youtube.com/watch?v=nl1PIagzgUo"
+          target="_blank"
+          class="bg-center showcaseFrame flex flex-col"
+        >
+          <div class="h-1/2 flex items-start justify-end p-9">
+            <img src="assets/Vector.png" class="bg-center" alt="arrow" />
+          </div>
+          <div
+            class="h-1/2 flex flex-col text-center justify-end text-white pb-5 px-6"
+          >
+            <p
+              class="underP text-[28px] md:text-[40px] font-inter font-semibold leading-tight"
+            >
+              Kunal Shah on Human Motivations
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Share Section -->
+    <div
+      class="pageSection mt-10 pb-9 md:rounded-[60px] rounded-[40px] ease-linear transition-all duration-500"
+      id="podreelIsForYou"
+    >
+      <div id="forYouTitle" class="px-5 pt-[30px]">
+        <h1
+          class="text-[40px] md:text-[75px] md:mt-10 mt-5 leading-[107%] mb-4"
+          \
+          style="font-family: 'Satoshi', sans-serif"
+        >
+          Where can I share podreels?
+        </h1>
+        <h2 class="text-[18px] md:text-[30px]">
+          Short answer: Everywhere your podcast has a presence
+        </h2>
+      </div>
+      <div class="px-4 md:px-24">
+        <div
+          id="selection2"
+          class="selection2 px-2 py-3 w-full md:rounded-[150px] mx-auto md:bg-[#544feb] md:text-[24px] md:mt-[48px] text-[20px] grid grid-cols-4 gap-1"
+        >
+          <button
+            onclick="switchShareSection(1);"
+            id="shareOption1"
+            class="bg-[#544feb] md:rounded-[100px] py-3 px-3 md:px-0 md:py-3 rounded-xl col-span-2 md:col-span-1 items-center flexrounded-xl"
+          >
+            Podcast apps
+          </button>
+          <button
+            onclick="switchShareSection(2);"
+            id="shareOption2"
+            class="bg-[#544feb] md:rounded-[100px] py-3 px-3 md:px-0 md:py-3 rounded-xl col-span-2 md:col-span-1 items-center flex rounded-xl"
+            style="background-color: #544feb; color: rgba(255, 255, 255, 0.6)"
+          >
+            Web Pages
+          </button>
+          <button
+            onclick="switchShareSection(3);"
+            id="shareOption3"
+            class="bg-[#544feb] md:rounded-[100px] py-3 px-3 md:px-0 md:py-3 rounded-xl col-span-2 md:col-span-1 items-center flexrounded-xl"
+            style="background-color: #544feb; color: rgba(255, 255, 255, 0.6)"
+          >
+            Social Media
+          </button>
+          <button
+            onclick="switchShareSection(4);"
+            id="shareOption4"
+            class="bg-[#544feb] md:rounded-[100px] py-3 md:py-3 rounded-xl col-span-2 md:col-span-1 items-center flex rounded-xl"
+            style="background-color: #544feb; color: rgba(255, 255, 255, 0.6)"
+          >
+            Transcripts
+          </button>
+        </div>
+      </div>
+      <div id="shareMedia" class="my-6 flex items-center justify-center">
+        <img
+          id="shareImage"
+          src="assets/shareSection/podcast.gif"
+          class="max-h-[500px]"
+          alt="share media"
+        />
+      </div>
+    </div>
+
+    <!-- Sign up section -->
+    <div id="signUp">
+      <div
+        id="signUpContents"
+        class="flex flex-row flex-nowrap justify-between items-center px-3 py-12"
+      >
+        <p class="hidden md:block h-full text-7xl">✨</p>
+        <div class="flex flex-col justify-center">
+          <h1
+            style="font-family: 'Satoshi', sans-serif"
+            class="font-inter leading-[46px] leading-[114%] font-bold text-[40px] md:text-[67px]"
+          >
+            Sign up to <span class="signGrad">boost your</span><br />
+            <span class="signGrad">podcast metrics</span>
+          </h1>
+          <p class="font-inter text-[27px] my-7">
+            We onboard people every week.
+          </p>
+          <a class="" href="add link to get early access"
+            ><button
+              class="btn-gradient-2 flex items-center md:text-[21px] font-semibold text-[28px] px-[29px] mx-auto text-black justify-center"
+            >
+              Get Early Access
+            </button></a
+          >
+        </div>
+        <p class="hidden md:block h-full text-7xl">✨</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div
+      class="w-screen py-1 border-t-[3px] border-[#FE0000] bg-[#FE0000] text-white font-inter font-[600] text-[16px] flex justify-center"
+    >
+      <div
+        class="md:block hidden overflow-clip w-screen h-[24px]"
+        data-duplicated="true"
+        data-direction="left"
+      >
+        ⚠️ Warning - Proceed with caution ⚠️ Warning - Proceed with caution ⚠️
+        Warning - Proceed with caution ⚠️ Warning - Proceed with caution ⚠️
+        Warning - Proceed with caution ⚠️ Warning - Proceed with caution ⚠️
+        Warning - Proceed with caution
+      </div>
+      <div class="md:hidden">
+        <span class="-mt-1">⚠️</span> Warning - Proceed with caution
+      </div>
+    </div>
+    <div
+      class="w-screen bg-[#FCEA2B] border-[3px] border-[#FE0000] flex flex-row justify-between items-center px-4 md:px-[120px] py-6"
+    >
+      <p class="text-[33px] md:text-7xl">🔥</p>
+      <p
+        class="text-inter leading-tight font-[400] text--[13px] md:text-[25px] text-black text-center w-full md:px-0 px-4"
+      >
+        podreel will <span class="font-bold">increase</span> your podcast
+        downloads,<br class="hidden md:block" />
+        <span class="font-bold">acquire</span> new listeners and get you closer
+        to<br class="hidden md:block" />
+        <span class="font-bold">generating revenue off your podcast</span>.
+      </p>
+      <p class="text-[33px] md:text-7xl">🔥</p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
